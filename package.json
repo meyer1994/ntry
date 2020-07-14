@@ -13,8 +13,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "compile": "cd contracts && truffle compile --all",
-    "migrate": "cd contracts && truffle migrate --reset --compile-all"
+    "compile": "cd contracts && npx truffle compile --all",
+    "migrate": "cd contracts && npx truffle migrate --reset --compile-all"
   },
   "keywords": [],
   "author": "",
