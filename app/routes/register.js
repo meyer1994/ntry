@@ -1,6 +1,6 @@
 const { w3, Birth } = require('../services/eth')
 
-module.exports.newBirth = async ctx => {
+module.exports.birth = async ctx => {
   const { name, date } = ctx.request.body
 
   const options = { from: w3.eth.defaultAccount }
