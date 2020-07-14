@@ -8,11 +8,13 @@
     "@truffle/contract": "^4.2.12",
     "ipfs-http-client": "^44.3.0",
     "koa": "^2.13.0",
+    "koa-bodyparser": "^4.3.0",
     "web3": "^1.2.9"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "cd contracts && truffle compile --all",
+    "migrate": "cd contracts && truffle migrate --reset --compile-all"
   },
   "keywords": [],
   "author": "",
