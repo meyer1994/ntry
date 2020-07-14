@@ -1,0 +1,16 @@
+os: linux
+dist: bionic
+
+language: node_js
+node_js:
+  - 'node'
+  - 'lts'
+
+cache:
+  npm: true
+
+install:
+  - npm install
+
+script:
+  - npm run compile
