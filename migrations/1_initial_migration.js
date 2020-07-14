@@ -1,5 +1,7 @@
-const Migrations = artifacts.require("Migrations");
+const Migrations = artifacts.require("Migrations")
+const Sum = artifacts.require("Sum")
 
-module.exports = function(deployer) {
-  deployer.deploy(Migrations);
-};
+module.exports = async deployer => {
+    deployer.deploy(Migrations)
+    deployer.deploy(Sum)
+}
