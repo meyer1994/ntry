@@ -19,6 +19,11 @@ const Marriage = Contract(MarriageABI)
 Marriage.setProvider(w3.currentProvider)
 module.exports.Marriage = Marriage
 
+const DivorceABI = require('../../build/contracts/Divorce.json')
+const Divorce = Contract(DivorceABI)
+Divorce.setProvider(w3.currentProvider)
+module.exports.Divorce = Divorce
+
 
 w3.eth.getAccounts().then(([ acc ]) => {
   console.log('Setting default account to:', acc)
