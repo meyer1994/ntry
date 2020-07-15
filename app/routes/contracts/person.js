@@ -1,4 +1,20 @@
-const { w3, Birth } = require('../services/eth')
+const { w3 } = require('../services/eth')
+
+module.exports.newPerson = async ctx => {
+
+}
+
+module.exports.addBirth = async ctx => {
+
+}
+
+module.exports.addMarriage = async ctx => {
+
+}
+
+module.exports.addDivorce = async ctx => {
+
+}
 
 module.exports.birth = async ctx => {
   const { name, date } = ctx.request.body

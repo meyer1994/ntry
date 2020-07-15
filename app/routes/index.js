@@ -1,13 +1,14 @@
 const Router = require('@koa/router')
 
 const health = require('./health')
-const register = require('./register')
+
+const birth = require('./contracts/birth')
 
 const router = new Router()
 
-router.get('/health/ipfs', health.ipfs)
-router.get('/health/eth', health.eth)
+router.get('/health/ipfs', health.getIpfs)
+router.get('/health/eth', health.getEth)
 
-router.post('/register/birth', register.birth)
+router.post('/docs/births', birth.postBirth)
 
 module.exports.router = router
