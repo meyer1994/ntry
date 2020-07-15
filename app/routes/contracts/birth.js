@@ -8,8 +8,8 @@ module.exports.postBirth = async ctx => {
 
   ctx.body = {
     addr: birth.address,
-    name: await birth.name(),
     date: await birth.date(),
+    name: await birth.name(),
   }
 }
 
@@ -20,7 +20,7 @@ module.exports.getBirth = async ctx => {
 
   ctx.body = {
     addr: birth.address,
-    name: await birth.name(),
     date: await birth.date(),
+    name: await birth.name(),
   }
 }
