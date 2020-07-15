@@ -14,6 +14,12 @@ const Death = Contract(DeathABI)
 Death.setProvider(w3.currentProvider)
 module.exports.Death = Death
 
+const MarriageABI = require('../../build/contracts/Marriage.json')
+const Marriage = Contract(MarriageABI)
+Marriage.setProvider(w3.currentProvider)
+module.exports.Marriage = Marriage
+
+
 w3.eth.getAccounts().then(([ acc ]) => {
   console.log('Setting default account to:', acc)
   w3.eth.defaultAccount = acc

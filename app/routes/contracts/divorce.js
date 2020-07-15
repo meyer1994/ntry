@@ -1,5 +1,26 @@
-const { w3 } = require('../services/eth')
+const { w3, Divorce } = require('../../services/eth')
 
-module.exports.newDivorce = async ctx => {
+module.exports.postDivorce = async ctx => {
+  const { date, marriage } = ctx.request.body
 
+  const options = { from: w3.eth.defaultAccount }
+  const divorce = await Divorce.new(date, marriage, options)
+
+  ctx.body = {
+    addr: divorce.address,
+    date: await divorce.date(),
+    marriage: await divorce.marriage(),
+  }
+}
+
+module.exports.getDivorce = async ctx => {
+  const { addr } = ctx.params
+
+  const divorce = await Divorce.at(addr)
+
+  ctx.body = {
+    addr: divorce.address,
+    date: await divorce.date(),
+    marriage: await divorce.marriage(),
+  }
 }
