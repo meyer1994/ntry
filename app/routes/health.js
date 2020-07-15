@@ -1,4 +1,4 @@
-const { w3 } = require('../services/eth')
+const { w3 } = require('../services/w3')
 const { ipfs } = require('../services/ipfs')
 
 module.exports.getIpfs = async ctx => {

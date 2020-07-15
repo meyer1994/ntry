@@ -6,6 +6,7 @@ const birth = require('./contracts.birth')
 const death = require('./contracts.death')
 const divorce = require('./contracts.divorce')
 const marriage = require('./contracts.marriage')
+const person = require('./contracts.person')
 
 const router = new Router()
 
@@ -23,5 +24,12 @@ router.get('/docs/divorces/:addr', divorce.getDivorce)
 
 router.post('/docs/marriages', marriage.postMarriage)
 router.get('/docs/marriages/:addr', marriage.getMarriage)
+
+router.post('/persons', person.postPerson)
+router.get('/persons/:addr', person.getPerson)
+router.post('/persons/:addr/births', person.postBirth)
+router.post('/persons/:addr/deaths', person.postDeath)
+router.post('/persons/:addr/divorces', person.postDivorce)
+router.post('/persons/:addr/marriages', person.postMarriage)
 
 module.exports.router = router

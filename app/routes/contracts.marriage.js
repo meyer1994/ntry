@@ -1,12 +1,7 @@
-const { w3, Marriage } = require('../services/eth')
+const { w3, Marriage } = require('../services/w3')
 
-module.exports.postMarriage = async ctx => {
-  const { date, first, second } = ctx.request.body
-
-  const options = { from: w3.eth.defaultAccount }
-  const marriage = await Marriage.new(date, first, second, options)
-
-  ctx.body = {
+const toJson = async marriage => {
+  return {
     addr: marriage.address,
     date: await marriage.date(),
     first: await marriage.first(),
@@ -14,15 +9,15 @@ module.exports.postMarriage = async ctx => {
   }
 }
 
+module.exports.postMarriage = async ctx => {
+  const { date, first, second } = ctx.request.body
+  const options = { from: w3.eth.defaultAccount }
+  const marriage = await Marriage.new(date, first, second, options)
+  ctx.body = await toJson(marriage)
+}
+
 module.exports.getMarriage = async ctx => {
   const { addr } = ctx.params
-
   const marriage = await Marriage.at(addr)
-
-  ctx.body = {
-    addr: marriage.address,
-    date: await marriage.date(),
-    first: await marriage.first(),
-    second: await marriage.second(),
-  }
+  ctx.body = await toJson(marriage)
 }
