@@ -26,9 +26,9 @@ module.exports.postBirth = async ctx => {
   const { addr } = ctx.params
   const { birth } = ctx.request.body
 
-  await Birth.at(birth)
   const person = await Person.at(addr)
-  await person.setBirth(birth.birth)
+  const options = { from: w3.eth.defaultAccount }
+  await person.setBirth(birth, options)
 
   ctx.body = await toJson(person)
 }
@@ -37,9 +37,9 @@ module.exports.postDeath = async ctx => {
   const { addr } = ctx.params
   const { death } = ctx.request.body
 
-  await Death.at(death)
   const person = await Person.at(addr)
-  await person.setDeath(death)
+  const options = { from: w3.eth.defaultAccount }
+  await person.setDeath(death, options)
 
   ctx.body = await toJson(person)
 }
@@ -48,9 +48,9 @@ module.exports.postMarriage = async ctx => {
   const { addr } = ctx.params
   const { marriage } = ctx.request.body
 
-  await Marriage.at(marriage)
   const person = await Person.at(addr)
-  await person.addMarriage(marriage)
+  const options = { from: w3.eth.defaultAccount }
+  await person.addMarriage(marriage, options)
 
   ctx.body = await toJson(person)
 }
@@ -59,9 +59,9 @@ module.exports.postDivorce = async ctx => {
   const { addr } = ctx.params
   const { divorce } = ctx.request.body
 
-  await Divorce.at(divorce)
   const person = await Person.at(addr)
-  await person.addDivorce(divorce)
+  const options = { from: w3.eth.defaultAccount }
+  await person.addDivorce(divorce, options)
 
   ctx.body = await toJson(person)
 }
