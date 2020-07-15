@@ -10,5 +10,6 @@ router.get('/health/ipfs', health.getIpfs)
 router.get('/health/eth', health.getEth)
 
 router.post('/docs/births', birth.postBirth)
+router.get('/docs/births/:addr', birth.getBirth)
 
 module.exports.router = router
