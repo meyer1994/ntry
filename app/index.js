@@ -1,6 +1,6 @@
 const Koa = require('koa')
 
-const accesslog = require('koa-accesslog')
+const logger = require('koa-logger')
 const bodyParser = require('koa-bodyparser')
 const error = require('koa-json-error')
 const responseTime = require('koa-response-time');
@@ -11,7 +11,7 @@ const app =  new Koa()
 
 // Middlewares
 app.use(bodyParser())
-app.use(accesslog())
+app.use(logger())
 app.use(error())
 app.use(responseTime())
 
