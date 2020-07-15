@@ -1,4 +1,4 @@
-const { w3, Death } = require('../../services/eth')
+const { w3, Death } = require('../services/eth')
 
 module.exports.postDeath = async ctx => {
   const { date, birth } = ctx.request.body

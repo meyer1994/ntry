@@ -1,4 +1,4 @@
-const { w3, Birth } = require('../../services/eth')
+const { w3, Birth } = require('../services/eth')
 
 module.exports.postBirth = async ctx => {
   const { name, date } = ctx.request.body

@@ -1,4 +1,4 @@
-const { w3, Marriage } = require('../../services/eth')
+const { w3, Marriage } = require('../services/eth')
 
 module.exports.postMarriage = async ctx => {
   const { date, first, second } = ctx.request.body
@@ -14,7 +14,7 @@ module.exports.postMarriage = async ctx => {
   }
 }
 
-module.exports.getDivorce = async ctx => {
+module.exports.getMarriage = async ctx => {
   const { addr } = ctx.params
 
   const marriage = await Marriage.at(addr)

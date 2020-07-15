@@ -18,10 +18,10 @@ router.get('/docs/births/:addr', birth.getBirth)
 router.post('/docs/deaths', death.postDeath)
 router.get('/docs/deaths/:addr', death.getDeath)
 
-router.post('/docs/divorces', divorces.postDivorces)
-router.get('/docs/divorces/:addr', divorces.getDivorces)
+router.post('/docs/divorces', divorce.postDivorce)
+router.get('/docs/divorces/:addr', divorce.getDivorce)
 
-router.post('/docs/marriages', marriages.postMarriages)
-router.get('/docs/marriages/:addr', marriages.getMarriages)
+router.post('/docs/marriages', marriage.postMarriage)
+router.get('/docs/marriages/:addr', marriage.getMarriage)
 
 module.exports.router = router
