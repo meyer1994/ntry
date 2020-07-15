@@ -1,4 +1,4 @@
-pragma solidity ^0.7.0;
+pragma solidity >0.6.4 <0.7.0;
 
 import { Person } from './Person.sol';
 import { Record } from './Record.sol';
