@@ -31,5 +31,3 @@ router.post('/persons/:addr/births', person.postBirth)
 router.post('/persons/:addr/deaths', person.postDeath)
 router.post('/persons/:addr/divorces', person.postDivorce)
 router.post('/persons/:addr/marriages', person.postMarriage)
-
-module.exports.router = router
