@@ -7,7 +7,7 @@ module.exports.birth = async ctx => {
   const birth = await Birth.new(date, name, options)
 
   const body = {
-    address: birth.address,
+    addr: birth.address,
     name: await birth.name(),
     date: await birth.date(),
     kind: await birth.kind(),
