@@ -5,13 +5,16 @@ import { Record } from './Record.sol';
 
 contract Marriage is Record {
     uint public time;
-    Person[] public people;
+    Person public first;
+    Person public second;
 
-    function setTime(uint _time) public {
+    constructor(uint _time, Person _first, Person _second) public {
         time = _time;
+        first = _first;
+        second = _second;
     }
 
-    function addPerson(Person _person) public {
-        people.push(_person);
+    function kind() public override view returns(string memory) {
+        return "Marriage";
     }
 }
