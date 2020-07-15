@@ -9,8 +9,8 @@ import { Record } from "./Record.sol";
 contract Person is Record {
     Birth public birth;
     Death public death;
-    Marriage[] public marriages;
-    Divorce[] public divorces;
+    Marriage[] private _marriages;
+    Divorce[] private _divorces;
 
     function setBirth(Birth _birth) public {
         birth = _birth;
@@ -21,10 +21,18 @@ contract Person is Record {
     }
 
     function addMarriage(Marriage _marriage) public {
-        marriages.push(_marriage);
+        _marriages.push(_marriage);
     }
 
     function addDivorce(Divorce _divorce) public {
-        divorces.push(_divorce);
+        _divorces.push(_divorce);
+    }
+
+    function marriages() public view returns(Marriage[] memory) {
+        return _marriages;
+    }
+
+    function divorces() public view returns(Marriage[] memory) {
+        return _marriages;
     }
 }
