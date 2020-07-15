@@ -13,8 +13,4 @@ contract Marriage is Record {
         first = _first;
         second = _second;
     }
-
-    function kind() public override view returns(string memory) {
-        return "Marriage";
-    }
 }

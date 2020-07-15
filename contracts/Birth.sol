@@ -10,8 +10,4 @@ contract Birth is Record {
         date = _date;
         name = _name;
     }
-
-    function kind() public override view returns(string memory) {
-        return "Birth";
-    }
 }

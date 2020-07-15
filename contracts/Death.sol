@@ -11,8 +11,4 @@ contract Death is Record {
         time = _time;
         birth = _birth;
     }
-
-    function kind() public override view returns(string memory) {
-        return "Death";
-    }
 }

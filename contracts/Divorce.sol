@@ -11,9 +11,4 @@ contract Divorce is Record {
         time = _time;
         marriage = _marriage;
     }
-
-    function kind() public override view returns(string memory) {
-        return "Divorce";
-    }
-
 }
