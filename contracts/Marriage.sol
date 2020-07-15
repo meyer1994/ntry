@@ -4,12 +4,12 @@ import { Person } from './Person.sol';
 import { Record } from './Record.sol';
 
 contract Marriage is Record {
-    uint public time;
+    uint public date;
     Person public first;
     Person public second;
 
-    constructor(uint _time, Person _first, Person _second) public {
-        time = _time;
+    constructor(uint _date, Person _first, Person _second) public {
+        date = _date;
         first = _first;
         second = _second;
     }

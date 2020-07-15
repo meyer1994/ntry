@@ -4,11 +4,11 @@ import { Record } from './Record.sol';
 import { Marriage } from './Marriage.sol';
 
 contract Divorce is Record {
-    uint public time;
+    uint public date;
     Marriage public marriage;
 
-    constructor(uint _time, Marriage _marriage) public {
-        time = _time;
+    constructor(uint _date, Marriage _marriage) public {
+        date = _date;
         marriage = _marriage;
     }
 }

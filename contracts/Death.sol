@@ -4,11 +4,11 @@ import { Birth } from "./Birth.sol";
 import { Record } from "./Record.sol";
 
 contract Death is Record {
-    uint public time;
+    uint public date;
     Birth public birth;
 
-    constructor(uint _time, Birth _birth) public {
-        time = _time;
+    constructor(uint _date, Birth _birth) public {
+        date = _date;
         birth = _birth;
     }
 }
