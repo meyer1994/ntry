@@ -17,7 +17,8 @@
     "web3": "^1.2.9"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "truffle": "^5.1.39"
   },
   "scripts": {
     "compile": "cd contracts && npx truffle compile --all",
