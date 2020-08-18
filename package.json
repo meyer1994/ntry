@@ -18,12 +18,14 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.4",
+    "standard": "^14.3.4",
     "truffle": "^5.1.39"
   },
   "scripts": {
     "compile": "cd contracts && npx truffle compile --all",
     "migrate": "cd contracts && npx truffle migrate --reset --compile-all",
-    "serve": "npx nodemon app"
+    "serve": "npx nodemon app",
+    "lint": "npx standard app/**/*.js test/**/*.js"
   },
   "keywords": [],
   "author": "",

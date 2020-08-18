@@ -4,7 +4,7 @@ const toJson = async death => {
   return {
     addr: death.address,
     date: await death.date(),
-    birth: await death.birth(),
+    birth: await death.birth()
   }
 }
 

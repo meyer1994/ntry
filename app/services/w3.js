@@ -4,7 +4,7 @@ const Contract = require('@truffle/contract')
 console.log('Connecting to Eth')
 const w3 = new Web3('http://localhost:8545')
 
-w3.eth.getAccounts().then(([ acc ]) => {
+w3.eth.getAccounts().then(([acc]) => {
   console.log('Setting default account to:', acc)
   w3.eth.defaultAccount = acc
 })

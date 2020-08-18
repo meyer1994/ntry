@@ -3,11 +3,11 @@ const Koa = require('koa')
 const logger = require('koa-logger')
 const bodyParser = require('koa-bodyparser')
 const error = require('koa-json-error')
-const responseTime = require('koa-response-time');
+const responseTime = require('koa-response-time')
 
 const { router } = require('./routes')
 
-const app =  new Koa()
+const app = new Koa()
 
 // Middlewares
 app.use(bodyParser())

@@ -4,7 +4,7 @@ const toJson = async divorce => {
   return {
     addr: divorce.address,
     date: await divorce.date(),
-    marriage: await divorce.marriage(),
+    marriage: await divorce.marriage()
   }
 }
 

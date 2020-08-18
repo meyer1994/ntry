@@ -4,7 +4,7 @@ const toJson = async birth => {
   return {
     addr: birth.address,
     date: await birth.date(),
-    name: await birth.name(),
+    name: await birth.name()
   }
 }
 
