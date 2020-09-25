@@ -1,4 +1,5 @@
-pragma solidity >0.6.4 <0.7.0;
+// SPDX-License-Identifier: MIT
+pragma solidity >0.7.0;
 
 import { Birth } from "./Birth.sol";
 import { Death } from "./Death.sol";
