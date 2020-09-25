@@ -1,9 +1,11 @@
 const { w3, Birth } = require('../services/w3')
 
 const toJson = async birth => {
+  const date = await birth.date()
+  const timestamp = w3.utils.hexToNumber(date)
   return {
     addr: birth.address,
-    date: await birth.date(),
+    date: new Date(timestamp),
     name: await birth.name()
   }
 }

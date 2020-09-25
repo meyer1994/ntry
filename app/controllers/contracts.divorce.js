@@ -1,9 +1,11 @@
 const { w3, Divorce } = require('../services/w3')
 
 const toJson = async divorce => {
+  const date = await divorce.date()
+  const timestamp = w3.utils.hexToNumber(date)
   return {
     addr: divorce.address,
-    date: await divorce.date(),
+    date: new Date(timestamp),
     marriage: await divorce.marriage()
   }
 }
