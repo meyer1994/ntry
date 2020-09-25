@@ -1,13 +1,12 @@
-
 module.exports = {
 
   networks: {
     development: {
-      gas: 6000000,
-      host: "127.0.0.1",
+      gas: 6721975,
+      host: '127.0.0.1',
       port: 8545,
-      network_id: "*",
-    },
+      network_id: '*'
+    }
   },
 
   mocha: {
@@ -16,14 +15,14 @@ module.exports = {
 
   compilers: {
     solc: {
-      version: "0.6.11",
+      version: '0.7.1',
       docker: true,
       settings: {
         optimizer: {
           enabled: true,
           runs: 200
         },
-        evmVersion: "istanbul"
+        evmVersion: 'istanbul'
       }
     }
   }
