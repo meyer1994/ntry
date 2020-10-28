@@ -7,7 +7,7 @@
     "@koa/router": "^9.3.1",
     "@truffle/contract": "^4.2.12",
     "i": "^0.3.6",
-    "ipfs-http-client": "^47.0.1",
+    "ipfs-http-client": "^48.0.0",
     "koa": "^2.13.0",
     "koa-bodyparser": "^4.3.0",
     "koa-json-error": "^3.1.2",
