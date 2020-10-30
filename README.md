@@ -1,4 +1,7 @@
 # ntry
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/56fdef6931c24dfdae8877f16533be2c)](https://app.codacy.com/gh/meyer1994/ntry?utm_source=github.com&utm_medium=referral&utm_content=meyer1994/ntry&utm_campaign=Badge_Grade)
+
 Notary in a blockchain
 
 ## Introduction
