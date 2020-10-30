@@ -1,52 +1,48 @@
 # ntry
+
+[![Build Status](https://travis-ci.com/meyer1994/ntry.svg?branch=master)](https://travis-ci.com/meyer1994/ntry)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/6b7b001be036424899295c1f3572e350)](https://www.codacy.com/gh/meyer1994/ntry/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=meyer1994/ntry&amp;utm_campaign=Badge_Grade)
+
 Notary in a blockchain
 
 ## Introduction
 This is a proof of concept REST server capable of managing a notary organization
-in a blockchain. Currently the support is limited to natural person's documents
-but may be improved in the future.
+in a blockchain. Currently, the support is limited to natural person's documents
+but may improve in the future.
 
-This implementation uses the Ethereum blockchain and IPFS as a data storage
-service.
+This implementation uses the [Ethereum][3] blockchain and [IPFS][2] as a data 
+storage layer/service.
 
 ## Development
-Here we describe the tools used for developing this application. I use Docker
-for easier booting of IPFS and Ethereum nodes and Truffle for Smart Contract
-development.
-
-First install all node dependencies:
+Here we describe the tools used for developing this application. I use [Docker][1]
+for easier booting of IPFS and Ethereum nodes and [Web3J][4] with its 
+[gradle plugin][5] for smart contract compilation and Java classes generation.
 
 ```bash
-$ npm install
+$ ./gradlew assemble
 ```
 
-To start developing, first start the containers. By default, both of them are
-started in offline mode.
+To start developing, first start the containers and run the application.
 
 ```bash
 $ docker-compose up
+$ ./gradlew bootRun
 ```
 
-After, you should compile all smart contracts using Truffle. I've provided an
-npm script that does that.
-
-```bash
-$ npm run compile
-$ npm run migrate  # optional
-```
-
-Just start the auto reload daemon and you are set to start developing.
-
-```bash
-$ npm run serve
-```
+The `bootRun` task should compile all the contracts for you if not already
+compiled.
 
 ## Tests
-I've yet to implement some tests...
+I do not have many tests, but, to run them:
 
-## Available endpoints
+```bash
+$ docker-compose up
+$ ./gradlew check
+```
+
+## (OUTDATED) Available endpoints
 Here are the available endpoints. Each one is further described below. All code
-examples are executed in a local server running on `localhost:3000` with local
+examples are executed in a local server running on `localhost:8080` with local
 Ethereum and IPFS nodes.
 
 ```
@@ -73,7 +69,8 @@ POST /persons/:addr/marriages
 
 ### Health
 The health endpoints are mostly used for debugging purposes. They return the
-node info and status for Ethereum and IPFS, respectively.
+node info and status for Ethereum and IPFS, respectively. The tool used to
+perform the HTTP request is [HTTPie][6]
 
 #### `GET /health/eth`
 Ethereum node status.
@@ -213,3 +210,10 @@ $ http GET :3000/docs/divorces/0x3440E51Ef80fF12A024696cC54dd04BD3C696D66
     "marriage": "0x9ec3724F5FfA5C03C9aCa6bC85C0e69EE895C6A9"
 }
 ```
+
+[1]: https://www.docker.com/
+[2]: https://ipfs.io/
+[3]: https://ethereum.org/en/
+[4]: http://web3j.io/
+[5]: https://github.com/web3j/web3j-gradle-plugin
+[6]: https://httpie.io/
