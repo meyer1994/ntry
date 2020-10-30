@@ -2,14 +2,14 @@ version: '3'
 
 services:
   eth:
-    image: ethereum/client-go
-    command: --dev --http --http.addr 0.0.0.0
+    image: trufflesuite/ganache-cli
+    command: --mnemonic dev
     ports:
       - '8545:8545'
 
   ipfs:
     image: ipfs/go-ipfs
-    command: daemon --init --offline
+    command: daemon --init
     ports:
       - '5001:5001'
 
