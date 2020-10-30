@@ -22,4 +22,4 @@ install:
   - ./gradlew assemble
 
 script:
-  - npm run compile
+  - ./gradlew check
