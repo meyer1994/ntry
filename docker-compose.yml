@@ -12,4 +12,3 @@ services:
     command: daemon --init
     ports:
       - '5001:5001'
-

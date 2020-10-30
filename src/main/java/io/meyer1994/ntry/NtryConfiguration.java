@@ -1,8 +1,5 @@
 package io.meyer1994.ntry;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import org.apache.camel.component.netty.http.NettyHttpComponent;
-import org.apache.camel.spi.RestConsumerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
