@@ -1,5 +1,6 @@
 package io.meyer1994.ntry;
 
+import io.meyer1994.ntry.configs.Web3JConfigs;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

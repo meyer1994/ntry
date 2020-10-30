@@ -1,7 +1,7 @@
-package io.meyer1994.ntry;
+package io.meyer1994.ntry.services;
 
-import io.meyer1994.ntry.dto.BirthDTO;
-import io.meyer1994.ntry.dto.NewBirthDTO;
+import io.meyer1994.ntry.dtos.BirthDTO;
+import io.meyer1994.ntry.dtos.NewBirthDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.web3j.birth.Birth;
@@ -13,7 +13,7 @@ import org.web3j.tx.gas.ContractGasProvider;
 import java.math.BigInteger;
 
 @Service
-public class NtryService {
+public class BirthService {
     @Autowired private Web3j web3j;
     @Autowired private Credentials credentials;
     @Autowired private ContractGasProvider contractGasProvider;

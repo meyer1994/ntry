@@ -1,4 +1,4 @@
-package io.meyer1994.ntry.dto;
+package io.meyer1994.ntry.dtos;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

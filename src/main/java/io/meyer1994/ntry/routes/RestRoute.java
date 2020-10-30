@@ -1,14 +1,14 @@
-package io.meyer1994.ntry;
+package io.meyer1994.ntry.routes;
 
-import io.meyer1994.ntry.dto.BirthDTO;
-import io.meyer1994.ntry.dto.NewBirthDTO;
+import io.meyer1994.ntry.dtos.BirthDTO;
+import io.meyer1994.ntry.dtos.NewBirthDTO;
 import org.apache.camel.LoggingLevel;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.model.rest.RestBindingMode;
 import org.springframework.stereotype.Component;
 
 @Component
-public class NtryRoute extends RouteBuilder {
+public class RestRoute extends RouteBuilder {
     @Override
     public void configure() {
         restConfiguration()

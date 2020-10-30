@@ -1,4 +1,4 @@
-package io.meyer1994.ntry;
+package io.meyer1994.ntry.configs;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -12,7 +12,7 @@ import org.web3j.tx.gas.StaticGasProvider;
 import java.math.BigInteger;
 
 @Configuration
-public class NtryConfiguration {
+public class Web3JConfigs {
     @Value("${application.web3j.private-key}")
     private String privateKey;
 
