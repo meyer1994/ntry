@@ -18,8 +18,14 @@ cache:
     - $HOME/.gradle/caches/
     - $HOME/.gradle/wrapper/
 
+before_install:
+  - docker-compose up
+
 install:
   - ./gradlew assemble
+
+before_script:
+  - docker-compose ps
 
 script:
   - ./gradlew check
