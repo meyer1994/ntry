@@ -4,16 +4,22 @@ dist: bionic
 services:
   - docker
 
-language: node_js
-node_js:
-  - 'node'
-  - 'lts/*'
+language: java
+jdk: openjdk11
+
+# Copied from:
+#   https://docs.travis-ci.com/user/languages/java/#caching
+before_cache:
+  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
 
 cache:
-  npm: true
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
 
 install:
-  - npm install
+  - ./gradlew assemble
 
 script:
   - npm run compile
