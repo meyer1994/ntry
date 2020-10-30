@@ -7,6 +7,7 @@ plugins {
 
 	id "io.freefair.lombok" version "5.3.0"
 	id "org.web3j" version "4.7.0"
+
 }
 
 group = 'io.meyer1994'
@@ -46,4 +47,10 @@ dependencies {
 
 test {
 	useJUnitPlatform()
+}
+
+solidity {
+	// Use docker version of solidity compiler
+	executable = "docker run --rm --tty -v $projectDir/src:/src -v $projectDir/build:/build ethereum/solc:0.7.4"
+	version = "0.7.4"
 }
