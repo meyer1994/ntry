@@ -1,4 +1,7 @@
 # ntry
+
+[![build](https://github.com/meyer1994/ntry/actions/workflows/build.yml/badge.svg)](https://github.com/meyer1994/ntry/actions/workflows/build.yml)
+
 Notary in a blockchain
 
 ## Introduction
