@@ -13,7 +13,7 @@
     "koa-json-error": "^3.1.2",
     "koa-logger": "^3.2.1",
     "koa-response-time": "^2.1.0",
-    "npm": "^7.5.2",
+    "npm": "^8.0.0",
     "web3": "^1.2.9"
   },
   "devDependencies": {
