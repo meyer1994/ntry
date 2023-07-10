@@ -17,7 +17,7 @@
     "web3": "^4.0.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4",
+    "nodemon": "^3.0.1",
     "truffle": "^5.1.39"
   },
   "scripts": {
